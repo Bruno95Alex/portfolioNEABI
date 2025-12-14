@@ -1,0 +1,44 @@
+.pageContainer {
+  padding: 40px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.membersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.memberCard {
+  background: #c0c0c0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.memberImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+.memberName {
+  font-weight: bold;
+}
+
+.memberRole {
+  font-size: 14px;
+  color: #555;
+}
+
+.memberIfce {
+  font-size: 13px;
+  color: #777;
+}

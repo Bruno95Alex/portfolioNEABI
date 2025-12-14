@@ -1,0 +1,57 @@
+:root {
+  /* Cores para o Modo Claro (Padrão) */
+  --background: #f5f5f5; /* Fundo claro, suave */
+  --foreground: #333333; /* Texto escuro */
+  
+  /* Cores do NEABI para uso em destaque (disponíveis globalmente) */
+  --neabi-red: #C0392B; /* Vermelho Terroso/Luta */
+  --neabi-brown: #7B523A; /* Marrom/Tom de Terra */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Cores para o Modo Escuro (Inspirado no NEABI) */
+    --background: #171717; /* Fundo bem escuro para o modo dark */
+    --foreground: #ededed; /* Texto claro */
+    /* Destaque: O Marrom do NEABI pode ser usado para elementos de fundo */
+    --neabi-dark-background: #7B523A; 
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--neabi-red); /* Usando o vermelho do NEABI para links */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  a {
+    color: var(--neabi-red); /* Mantém o vermelho do NEABI para links no modo dark */
+  }
+}

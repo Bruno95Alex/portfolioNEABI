@@ -1,0 +1,175 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo escuro e semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Garante que o modal fique por cima de tudo */
+  backdrop-filter: blur(5px); /* Efeito de desfoque sutil */
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1010;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  line-height: 1;
+  transition: background-color 0.3s;
+}
+
+.modalCloseButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 80vh; /* Limita a altura da imagem para caber na tela */
+  object-fit: contain;
+  display: block;
+}
+
+.modalDescription {
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  background-color: #f5f5f5;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* -------------------- */
+/* ESTILOS DA GALERIA */
+/* -------------------- */
+
+/* O container principal para o layout em cascata */
+
+/* Variáveis de Cor do NEABI IFCE */
+:root {
+  --neabi-red: #C0392B; /* Vermelho Terroso/Luta */
+  --neabi-brown: #7B523A; /* Marrom/Tom de Terra */
+  --color-text-light: #ffffff;
+  --color-text-dark: #1a1a1a;
+}
+
+.galleryContainer {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Aplicação do Gradiente */
+  background: linear-gradient(135deg, var(--neabi-brown) 0%, var(--neabi-red) 100%);
+  color: var(--color-text-light); /* Define a cor do texto principal como branco */
+  min-height: 100vh; /* Garante que o gradiente cubra toda a altura */
+}
+
+.galleryTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-light); /* Título em branco para contraste */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+/* O container principal para o layout em cascata */
+.galleryGrid {
+  /* Define o número de colunas e o espaçamento entre elas */
+  column-count: 3; /* 3 colunas em telas maiores */
+  column-gap: 24px; /* Espaçamento entre as colunas */
+}
+
+/* Media Query para Responsividade */
+@media (max-width: 1024px) {
+  .galleryGrid {
+    column-count: 2; /* 2 colunas em tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .galleryGrid {
+    column-count: 1; /* 1 coluna em celulares */
+  }
+}
+
+/* O cartão individual da imagem */
+.galleryCard {
+  /* Essencial para o Masonry: evita que o item seja quebrado entre colunas */
+  break-inside: avoid;
+  margin-bottom: 24px; /* Espaçamento na vertical */
+  /* Fundo do card semi-transparente para o gradiente aparecer */
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  /* Borda sutil com a cor do gradiente */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.galleryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.galleryImage {
+  /* A imagem deve ocupar 100% da largura do card */
+  width: 100%;
+  /* A altura será automática, permitindo que a imagem mantenha sua proporção */
+  height: auto;
+  display: block;
+}
+
+.galleryDescription {
+  padding: 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--color-text-light); /* Descrição em branco */
+  /* Fundo para a descrição para garantir leitura */
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos de título e tags do CSS antigo que não são usados no JSX atual, mas podem ser úteis */
+.title {
+  margin-top: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tags {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+.image-link {
+  text-decoration: none;
+  color: inherit;
+}
