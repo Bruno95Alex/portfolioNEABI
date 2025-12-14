@@ -97,26 +97,16 @@ Para rodar o projeto localmente, siga os passos abaixo:
 ### 4.2. Configuração do Ambiente
 
 1.  **Clone o repositório:**
-    \`\`\`bash
-    git clone [URL_DO_SEU_REPOSITORIO]
-    cd [NOME_DO_PROJETO]
-    \`\`\`
 
 2.  **Instale as dependências:**
     \`\`\`bash
     npm install
     \`\`\`
 
-3.  **Variáveis de Ambiente:**
-    Crie um arquivo `.env.local` na raiz do projeto e adicione a string de conexão do seu banco de dados Neon:
-    \`\`\`
-    DATABASE_URL="postgresql://[USER]:[PASSWORD]@[HOST]/[DB_NAME]?sslmode=require"
-    \`\`\`
-
-4.  **Configuração do Banco de Dados:**
+3.  **Configuração do Banco de Dados:**
     Execute o esquema SQL fornecido na Seção 3 no seu banco de dados Neon.
 
-### 4.3. Inserção de Dados
+### 3.3. Inserção de Dados
 
 Para que as imagens apareçam na galeria, você deve:
 
@@ -124,7 +114,7 @@ Para que as imagens apareçam na galeria, você deve:
 2.  Obter o **Link Direto** (`https://i.imgur.com/...`).
 3.  Inserir o `titulo`, o `url` (link do Imgur) e a `descricao` na tabela `galeria_imagens` do seu banco de dados Neon.
 
-### 4.4. Execução do Projeto
+### 3.4. Execução do Projeto
 
 Inicie o servidor de desenvolvimento:
 
