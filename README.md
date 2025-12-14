@@ -105,7 +105,6 @@ Para rodar o projeto localmente, siga os passos abaixo:
 2.  **Instale as dependências:**
     \`\`\`bash
     npm install
-    # ou yarn install / pnpm install
     \`\`\`
 
 3.  **Variáveis de Ambiente:**
