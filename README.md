@@ -1,6 +1,6 @@
-# Projeto NEABI Jaguaruana - Galeria Interativa
+# Projeto NEABI Jaguaruana - Portifólio
 
-Este projeto visa a criação de uma galeria interativa e um site institucional para o Núcleo de Estudos Afro-Brasileiros e Indígenas (NEABI) do IFCE Campus Jaguaruana. O design foi inspirado na estética minimalista e elegante do site `fiftycoffees.com`, incorporando a identidade visual e as cores representativas do NEABI.
+Este projeto visa Criar um portfólio para os projetos do Núcleo de Estudos Afro-brasileiros e Indígenas (NEABI) do IFCE Campus Jaguaruana. O objetivo é apresentar de forma visualmente as atividades e o corpo de membros do núcleo.
 
 ## Imagens
 
